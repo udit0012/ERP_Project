@@ -1,38 +1,296 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Neue', cursive;
+}
+body{
+    background-color: #d0d0d0;
+}
+.navbar{
+    background-color: #ececec;
+    display: flex;
+    align-items: center;
+}
+.navbar img{
+    height: 5vh;
+    margin: .5rem;
+}
+.formbox{
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.back{
+    display: flex;
+    justify-content: right;
+    margin: 1rem 4rem;
+    font-size: 1.3rem;
+}
+.back a{
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+}
+.back img{
+    height: 4vh;
+}
+.formbox h2{
+    margin-bottom: 3rem;
+    font-size: 1.9rem;
+    text-decoration: underline;
+}
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input{
+    width: 70%;
+    margin: 1rem;
+    display: grid;
+    font-size: 1.4rem;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    column-gap: 5rem;
+}
+.input1{
+    display: grid;
+    font-size: 1.4rem;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+}
+.input input{
+    width: 100%;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.4rem;
+    outline: none;
+    padding: .5rem 1.5rem;
+    background-color: #dcf2f4;
+}
+.input1 input{
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.4rem;
+    outline: none;
+    padding: .5rem 1.5rem;
+    background-color: #dcf2f4;
+}
+.input input::placeholder{
+    color: rgb(103, 103, 103);
+}
+.sbmbtn{
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    margin: 1rem;
+    padding: .5rem 1rem;
+    font-size: 1.3rem;
+    background-color: #34DC0A;
+}
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dashDetails{
+    margin: 1rem 4rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 3rem 7rem;
+    width: 70%;
+    background-color: black;
+    color: white;
+}
+.dashDetails img{
+    height: 13vh;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.dashDetails .name{
+    margin: 0 5rem;
+}
+.dashDetails .name h1{
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+.dashDetails .name span{
+    background-color: rgb(255, 70, 70);
+    padding: .5rem;
+    font-size: 1.4rem;
+    border-radius: .5rem;
+}
+.grid{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.grid1{
+    width: 70%;
+}
+.grid2{
+    width: 25%;
+}
+.areaResearch .heading,.education .heading, .contact .heading{
+    font-size: 1.4rem;
+    color: rgb(255, 64, 64);
+}
+.areaResearch .box,.education .box,.contact .box{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-weight: 900;
+    border-radius: .75rem;
+    background-color: white;
+}
+.box ul{
+    padding: .5rem;
+    padding-left: 2rem;
+}
+.box li{
+    padding: .5rem 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .1s;
+}
+.box li:hover{
+    transform: scale(1.05);
+}
+.box .addbtn{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .75rem 1rem;
+    height: 1vh;
+    font-size: 1.2rem;
+    border-radius: .25rem;
+}
+.box .editbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    height: 3vh;
+    border: 0;
+    background-color: black;
+    outline: none;
+    border-radius: .25rem;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .1s;
+}
+.box .addbtn:hover, .box .editbtn:hover{
+    background-color: rgb(52, 52, 52);
+}
+.box .addbtn img ,.box .editbtn img{
+    height: 1rem;
+    margin-right: .5rem;
+}
+.box .details{
+    font-size: 1.2rem;
+    margin-bottom: 5rem; /* to be removed */
+}
+.box .details div{
+    margin: .5rem;
+}
+.contact .box{
+    height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.homepage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.homebox{
+    width: 60%;
+    margin: 4rem 0;
 }
+.homebox .heading{
+    font-size: 2.5rem;
+}
+.homebox .searchBox{
+    background-color: black;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 1rem;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.homebox .searchBox .options{
+    background-color: #d0d0d0;
+    display: flex;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    font-size: 1.5rem;
+    padding-top: .25rem;
+}
+.searchBox .options .option1{
+    padding:1rem 1rem;
+    cursor: pointer;
+}
+.searchBox .options .active{
+    background-color: white;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+.searchBox .optionListBox{
+    padding: 1rem 0;
+    background-color: white;
+}
+.searchBox .optionsLists{
+    padding: 1rem;
+    height: 50vh;
+    overflow-y: scroll;
+}
+.optionsLists .listItems{
+    padding: 2rem 1rem;
+    margin: .5rem 0;
+    background-color: black;
+    color: white;
+    font-size: 1.4rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .2s;
+}
+.optionsLists .listItems:hover{
+    background-color: rgb(68, 68, 68);
+}
+.optionsLists .listItems2{
+    padding: 1rem;
+}
+.optionsLists .listItems a{
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+.optionsLists .listItems img{
+    height: 5vh;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-right: 2rem;
+}
+.listItems2 a .name{
+    font-size: 1.7rem;
+}
+.listItems a .desig{
+    font-size: 1.1rem;
 }
